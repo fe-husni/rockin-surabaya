@@ -478,16 +478,6 @@ body::before {
   z-index: -1;
 }
 
-.venue-row {
-  /* font-size: 13px;
-  letter-spacing: 2px;
-  color: var(--white);
-  margin-bottom: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px; */
-}
 .venue-row i span{
   font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
