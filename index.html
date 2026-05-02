@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rockin' Surabaya 2026 — Supermusic Presents</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-img">
+        <img src="assets/img/logo.png" alt="">
+        <!-- <div class="nav-logo-text">ROCKIN' SURABAYA</div>
+        <div class="nav-logo-badge">2026</div> -->
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#lineup">Line Up</a></li>
+      <li><a href="#savedate">Overview</a></li>
+      <li><a href="#rundown">Rundown</a></li>
+      <li><a href="#ticket">Tiket</a></li>
+      <li><a href="#ticket" class="nav-cta">RSVP SEKARANG</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- mobile nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="close-btn" onclick="toggleMobileNav()">✕</button>
+    <a href="#lineup" onclick="toggleMobileNav()">LINE UP</a>
+    <a href="#savedate" onclick="toggleMobileNav()">OVERVIEW</a>
+    <a href="#rundown" onclick="toggleMobileNav()">RUNDOWN</a>
+    <a href="#ticket" onclick="toggleMobileNav()">TIKET</a>
+    <a href="#ticket" class="nav-cta" style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;"
+      onclick="toggleMobileNav()">RSVP SEKARANG</a>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <!-- <div class="hero-splatter"></div> -->
+    <div class="hero-scan"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow fade-up delay-1">[ SUPERMUSIC PRESENTS ]</div>
+      <h1 class="hero-headline fade-up delay-2">
+        <span class="line-left">ROCKIN</span>
+        <span class="line-center">SURABAYA</span>
+        <span class="line-right">IS CALLING.</span>
+      </h1>
+      <p class="hero-sub fade-up delay-3">Satu malam. Satu panggung. Ribuan kepalan tangan di udara.</p>
+      <p class="hero-support fade-up delay-4">Rockin Surabaya bukan cuma konser, ini medan tempur buat lo yang masih
+        punya nyali. Luapkan energimu dan jadilah saksi sejarah saat raksasa rock mengambil alih kota!</p>
+      <div class="cta-row fade-up delay-5">
+        <a href="#ticket" class="btn-primary">JOIN THE PIT</a>
+        <a href="#savedate" class="btn-outline">DETAIL ACARA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ RUNNING BANNER ══ -->
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="tickerTrack">
+      <div class="ticker-item">SUPERMAN IS DEAD <span>✦</span> BURGERKILL <span>✦</span> TEENAGE DEATH STAR
+        <span>✦</span> MORFEM <span>✦</span> MCPR <span>✦</span> 510 FT PHOPIRA <span>✦</span> SUPERIOTS <span>✦</span>
+        KELOMPOK PENERBANG ROKET <span>✦</span> DPMB X SM <span>✦</span> ROMI AND THE JAHAT'S <span>✦</span> THE JEBLOGS
+        <span>✦</span> STEREOWALL <span>✦</span> THE CLOVES AND THE TOBACCO <span>✦</span>
+      </div>
+      <div class="ticker-item" aria-hidden="true">SUPERMAN IS DEAD <span>✦</span> BURGERKILL <span>✦</span> TEENAGE
+        DEATH STAR <span>✦</span> MORFEM <span>✦</span> MCPR <span>✦</span> 510 FT PHOPIRA <span>✦</span> SUPERIOTS
+        <span>✦</span> KELOMPOK PENERBANG ROKET <span>✦</span> DPMB X SM <span>✦</span> ROMI AND THE JAHAT'S
+        <span>✦</span> THE JEBLOGS <span>✦</span> STEREOWALL <span>✦</span> REBELLION ROSE <span>✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SAVE THE DATE ══ -->
+  <section id="savedate">
+    <div class="halftone-bg"></div>
+    <div class="red-stripe"></div>
+    <div style="position:relative;z-index:1;">
+      <div class="section-eyebrow">[ MARK YOUR CALENDAR ]</div>
+      <div class="date-display">
+        12 DESEMBER 2026
+        <div class="solid">12 DESEMBER 2026</div>
+      </div>
+      <div class="venue-row">
+        <span class="venue-pin">📍</span>
+        <span>LAPANGAN BUMI MARINIR GUNUNGSARI, KODIKMAR, SURABAYA</span>
+      </div>
+      <div class="countdown">
+        <div class="cd-block">
+          <div class="cd-num" id="cd-days">000</div>
+          <div class="cd-label">Hari</div>
+        </div>
+        <div class="cd-block">
+          <div class="cd-num" id="cd-hours">00</div>
+          <div class="cd-label">Jam</div>
+        </div>
+        <div class="cd-block">
+          <div class="cd-num" id="cd-mins">00</div>
+          <div class="cd-label">Menit</div>
+        </div>
+        <div class="cd-block">
+          <div class="cd-num" id="cd-secs">00</div>
+          <div class="cd-label">Detik</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ripped edge -->
+  <div class="ripped-edge">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+      <path
+        d="M0,0 L60,20 L120,5 L200,30 L280,8 L360,25 L440,3 L520,18 L600,10 L680,28 L760,6 L840,22 L920,2 L1000,16 L1080,26 L1160,8 L1240,20 L1320,4 L1380,18 L1440,12 L1440,40 L0,40 Z"
+        fill="#111111" />
+    </svg>
+  </div>
+
+  <!-- ══ LINEUP ══ -->
+  <section id="lineup">
+    <div class="lineup-header">
+      <div class="section-eyebrow">[ — MEET THE BANDS — ]</div>
+      <h2 class="section-title">STAR <span class="accent">LINE UP</span> ✦</h2>
+      <p>Semua untuk satu malam yang tidak akan terlupakan</p>
+    </div>
+    <div class="lineup-grid">
+      <div class="lineup-card lineup-headliner">
+        <div class="lc-tier">✦ HEADLINER ✦</div>
+        <div class="lc-img"><img src="assets/logo/SID.png" alt=""></div>
+        <div class="lc-name">SUPERMAN IS DEAD</div>
+        <div class="lc-sub">Punk Rock · Kuta, Bali</div>
+      </div>
+      <div class="lineup-card lineup-headliner">
+        <div class="lc-tier">✦ HEADLINER ✦</div>
+        <div class="lc-img"><img src="assets/logo/burgerkill.png" alt=""></div>
+        <div class="lc-name">BURGERKILL</div>
+        <div class="lc-sub">Metalcore · Bandung</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SPECIAL GUEST</div>
+        <div class="lc-img"><img src="assets/logo/tds.png" alt=""></div>
+        <div class="lc-name">TEENAGE DEATH STAR</div>
+        <div class="lc-sub">Alternative Rock · Bandung</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SPECIAL GUEST</div>
+        <div class="lc-img"><img src="assets/logo/rebellionrose.png" alt=""></div>
+        <div class="lc-name">REBELLION ROSE</div>
+        <div class="lc-sub">Punk Rock · Yogyakarta</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SPECIAL GUEST</div>
+        <div class="lc-img"><img src="assets/logo/mcpr.png" alt=""></div>
+        <div class="lc-name">MCPR</div>
+        <div class="lc-sub">Punk Rock · Solo</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/510.png" alt=""></div>
+        <div class="lc-name">510 FT PHOPIRA</div>
+        <div class="lc-sub">alternative Rock · Bandung</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/superiots.png" alt=""></div>
+        <div class="lc-name">SUPERIOTS</div>
+        <div class="lc-sub">Punk Rock · Skate Punk · Pop Punk</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/kpr.png" alt=""></div>
+        <div class="lc-name">KPR</div>
+        <div class="lc-sub">Rock · Hard Rock</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/dpmbxsm.png" alt=""></div>
+        <div class="lc-name">DPMB X SM</div>
+        <div class="lc-sub">Ghettocore · Yogyakarta</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/rtj.png" alt=""></div>
+        <div class="lc-name">ROMI & THE JAHAT'S</div>
+        <div class="lc-sub">Punk Rock · Jakarta</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/the-jeblogs.png" alt=""></div>
+        <div class="lc-name">THE JEBLOGS</div>
+        <div class="lc-sub">Alternative Rock · Indie Rock</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/stereowall.png" alt=""></div>
+        <div class="lc-name">STEREOWALL</div>
+        <div class="lc-sub">Alternative Rock · Jakarta</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/morfem.png" alt=""></div>
+        <div class="lc-name">MORFEM</div>
+        <div class="lc-sub">Rock Indie · Jakarta</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/tcatt.png" alt=""></div>
+        <div class="lc-name">THE CLOVES & THE TOBACCO</div>
+        <div class="lc-sub">Celtic Punk · Folk Punk · Yogyakarta</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/lukanegara.png" alt=""></div>
+        <div class="lc-name">LUKANEGARA</div>
+        <div class="lc-sub">Pop Punk · Tasikmalaya</div>
+      </div>
+      <div class="lineup-card">
+        <div class="lc-tier">SUPPORTING</div>
+        <div class="lc-img"><img src="assets/logo/mod.png" alt=""></div>
+        <div class="lc-name">MIRACLE OF DESTRUCTION</div>
+        <div class="lc-sub">Punk Rock · Yogyakarta</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ RUNDOWN ══ -->
+  <section id="rundown">
+    <div class="rundown-inner">
+      <div class="rundown-header">
+        <div class="section-eyebrow">[ — RUNDOWN — ]</div>
+        <h2 class="section-title">STAR RUNDOWN <span class="accent">✦</span></h2>
+      </div>
+      <div id="accordion">
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">11:00</span>
+            <span class="acc-name">OPEN GATE</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner"><img src="assets/line-up/open-gate.jpg" alt=""></div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">OPEN GATE</div>
+                <p class="acc-bio">Gate dibuka. Ribuan kepalan tangan bergerak menuju panggung
+                  utama. Dateng cepet. Atmosfer mulai panas dari sini.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">12:25</span>
+            <span class="acc-name">DPMB X SM</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo">
+                  <div class="acc-photo-inner"><img src="assets/line-up/dpmbxsm.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">DPMB X SM</div>
+                <p class="acc-bio">Yogyakarta's Finest Hip-Hop Siege! Lupakan beat lembek, Don Gantz dan Masta Boogie
+                  bawa rima tajam dari album kolaborasi "BACKTOBACK". Ini serangan Boom-Bap yang bakal bikin leher lo
+                  pegel karena headbang!</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> BACKTOBACK</li>
+                  <li><span>02.</span> Ndasmu</li>
+                  <li><span>03.</span> Koboi Kota</li>
+                  <li><span>04.</span> Packs (feat. SM)</li>
+                  <li><span>05.</span> Evolusi</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">12:25</span>
+            <span class="acc-name">LUKANEGARA</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo">
+                  <div class="acc-photo-inner"><img src="assets/line-up/lukanegara.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">LUKANEGARA</div>
+                <p class="acc-bio">Variasi sonik Emo-Pop modern dengan harmoni kuat. Siapkan suara buat sing-along
+                  lagu-lagu melodi rock yang sudah jadi anthem modern skena festival.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Jakarta Hari Ini</li>
+                  <li><span>02.</span> Blood And Light</span></li>
+                  <li><span>03.</span> Tentang Kita</li>
+                  <li><span>04.</span> Terjebak Imajinasi</li>
+                  <li><span>05.</span> Forever</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">13:25</span>
+            <span class="acc-name">MIRACLE OF DESTRUCTION</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/mod.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">MIRACLE OF DESTRUCTION</div>
+                <p class="acc-bio">Legenda punk rock Indonesia dari tanah Bali. Bobby, Eka, dan Jerinx membawa anthem
+                  perlawanan yang menggerakkan generasi. Kuta Rock City bukan hanya lagu — ini sebuah gerakan.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Kuta Rock City</li>
+                  <li><span>02.</span> Bad Bad Bad</li>
+                  <li><span>03.</span> Jadilah Legenda</li>
+                  <li><span>04.</span> Bukan Pahlawan</li>
+                  <li><span>05.</span> Punk Hari Ini</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">13:55</span>
+            <span class="acc-name">STEREOWALL</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/stereowall.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">STEREOWALL</div>
+                <p class="acc-bio">Variasi sonik Emo-Pop modern dengan harmoni kuat. Siapkan suara buat sing-along
+                  lagu-lagu melodi rock yang sudah jadi anthem modern skena festival.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Jakarta Hari Ini</li>
+                  <li><span>02.</span> Blood And Light</span></li>
+                  <li><span>03.</span> Tentang Kita</li>
+                  <li><span>04.</span> Terjebak Imajinasi</li>
+                  <li><span>05.</span> Forever</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">14:55</span>
+            <span class="acc-name">The Cloves and The Tobacco</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/tcatt.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">The Cloves and The Tobacco</div>
+                <p class="acc-bio">Pesta Celtic Punk khas Yogyakarta! Paduan distorsi gitar dengan banjo dan tin whistle
+                  yang bakal bikin seluruh arena berdansa liar.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Sajak Usang Kelas Pekerja</li>
+                  <li><span>02.</span> Tapak Tilas Kerinduan</li>
+                  <li><span>03.</span> Biarkan Berlari</li>
+                  <li><span>04.</span> Sunyi Tanah Peristirahatan</li>
+                  <li><span>05.</span> Di Sela Waktu Tersisa</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">15:25</span>
+            <span class="acc-name">MCPR</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/MCPR.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">MCPR</div>
+                <p class="acc-bio">Alternative rock powerhouse dari Jakarta dengan sound yang unik memadukan elemen
+                  post-punk dan alternative. Penutup malam yang sempurna.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Manusia Pertama</li>
+                  <li><span>02.</span> Serigala</li>
+                  <li><span>03.</span> Terakhir</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">16:05</span>
+            <span class="acc-name">THE JEBLOGS</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/the-jeblogs.jpeg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">THE JEBLOGS</div>
+                <p class="acc-bio">Alternative rock powerhouse dari Jakarta dengan sound yang unik memadukan elemen
+                  post-punk dan alternative. Penutup malam yang sempurna.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Manusia Pertama</li>
+                  <li><span>02.</span> Serigala</li>
+                  <li><span>03.</span> Terakhir</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">17:05</span>
+            <span class="acc-name">SUPERIOTS</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/superiots.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">SUPERIOTS</div>
+                <p class="acc-bio">Kebanggaan punk dari Bogor dengan semangat DIY kental. Lagu-lagu mereka adalah suara
+                  harian para Kawanriots yang jujur dan relate dengan kerasnya hidup.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Aku Yang Malang 4</li>
+                  <li><span>02.</span> Kekasih Tolol</li>
+                  <li><span>03.</span> Lepas Kendali</li>
+                  <li><span>04.</span> Senjata Baru</li>
+                  <li><span>05.</span> Tak Bertuan</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">17:32</span>
+            <span class="acc-name">BREAK</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/breakjpg.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">BREAK</div>
+                <p class="acc-bio">Alternative rock powerhouse dari Jakarta dengan sound yang unik memadukan elemen
+                  post-punk dan alternative. Penutup malam yang sempurna.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">17:55</span>
+            <span class="acc-name">TEENAGE DEATH STAR</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/tds.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">TEENAGE DEATH STAR</div>
+                <p class="acc-bio">Skill Can Wait, Let's Rock! Raja garage rock yang gak peduli teknis tapi sangat
+                  peduli pada energi kekacauan murni di atas panggung.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Super Lover</li>
+                  <li><span>02.</span> I've Got Johnny in My Head</li>
+                  <li><span>03.</span> Absolute Beginner Terror</li>
+                  <li><span>04.</span> All That Glitters Are Not Gold</li>
+                  <li><span>05.</span> 21st Century Boy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">18:55</span>
+            <span class="acc-name">MORFEM</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/Morfem.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">MORFEM</div>
+                <p class="acc-bio">Proyek fuzz-rock Jakarta dari Jimi Multhazam. Lirik cerdas yang menangkap potret
+                  kehidupan urban dengan balutan distorsi tebal.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Jungkir Balik</li>
+                  <li><span>02.</span> Rayakan Pemenang</li>
+                  <li><span>03.</span> Tiba-Tiba Terjadi</li>
+                  <li><span>04.</span> Roman Underground</li>
+                  <li><span>05.</span> Binar Wajah Sebaya</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">19:35</span>
+            <span class="acc-name">ROMI & THE JAHAT'S</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/rtj.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">ROMI & THE JAHAT'S</div>
+                <p class="acc-bio">Alternative rock powerhouse dari Jakarta dengan sound yang unik memadukan elemen
+                  post-punk dan alternative. Penutup malam yang sempurna.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Manusia Pertama</li>
+                  <li><span>02.</span> Serigala</li>
+                  <li><span>03.</span> Terakhir</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">20:15</span>
+            <span class="acc-name">SUPERMAN IS DEAd</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/superman-is-dead.jpeg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">SUPERMAN IS DEAd</div>
+                <p class="acc-bio">Tiga Dekade Punk Rock, Bir, dan Perlawanan! Rayakan 30 tahun perjalanan Lady Rose dan
+                  Outsiders di bawah langit Surabaya. Suara dari Bali yang gak akan pernah bisa dibungkam!</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Sunset Di Tanah Anarki</li>
+                  <li><span>02.</span> Bulan Dan Ksatria</li>
+                  <li><span>03.</span> Kuta Rock City</li>
+                  <li><span>04.</span> Memories of Rose</li>
+                  <li><span>05.</span> Jadilah Legenda</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">21:10</span>
+            <span class="acc-name">KELOMPOK PENERBANG ROKET</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/kpr.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">KELOMPOK PENERBANG ROKET</div>
+                <p class="acc-bio">Hard Rock psikedelik yang bakal bawa lo balik ke era kejayaan rock 70-an. Eksplosif,
+                  liar, dan penuh improvisasi sonik yang gahar.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Anjing Jalanan</li>
+                  <li><span>02.</span> Mati Muda</li>
+                  <li><span>03.</span> Dimana Merdeka</li>
+                  <li><span>04.</span> Tanda Tanya</li>
+                  <li><span>05.</span> Berita Cuaca</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">21:50</span>
+            <span class="acc-name">BURGERKILL</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/burgerkill.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">BURGERKILL</div>
+                <p class="acc-bio">Alternative rock powerhouse dari Jakarta dengan sound yang unik memadukan elemen
+                  post-punk dan alternative. Penutup malam yang sempurna.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Manusia Pertama</li>
+                  <li><span>02.</span> Serigala</li>
+                  <li><span>03.</span> Terakhir</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">22:30</span>
+            <span class="acc-name">Rebellion Rose</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/rebellionrose.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">Rebellion Rose</div>
+                <p class="acc-bio">Alternative rock powerhouse dari Jakarta dengan sound yang unik memadukan elemen
+                  post-punk dan alternative. Penutup malam yang sempurna.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Manusia Pertama</li>
+                  <li><span>02.</span> Serigala</li>
+                  <li><span>03.</span> Terakhir</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="acc-time">23:10</span>
+            <span class="acc-name">510 FT. PHOPIRA</span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <div class="acc-photo">
+                <div class="acc-photo-inner">
+                  <div class="acc-photo-inner"><img src="assets/line-up/510.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="acc-info">
+                <div class="acc-info-name">510 FT. PHOPIRA</div>
+                <p class="acc-bio">Alternative rock powerhouse dari Jakarta dengan sound yang unik memadukan elemen
+                  post-punk dan alternative. Penutup malam yang sempurna.</p>
+                <ul class="acc-setlist">
+                  <li><span>01.</span> Manusia Pertama</li>
+                  <li><span>02.</span> Serigala</li>
+                  <li><span>03.</span> Terakhir</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end accordion -->
+    </div>
+  </section>
+
+  <!-- ripped edge into ticket -->
+  <div class="ripped-edge" style="transform:rotate(180deg);">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+      <path
+        d="M0,0 L80,25 L160,8 L240,30 L320,5 L400,22 L480,0 L560,18 L640,6 L720,28 L800,4 L880,20 L960,8 L1040,26 L1120,2 L1200,18 L1280,10 L1360,24 L1440,0 L1440,40 L0,40 Z"
+        fill="#C0392B" />
+    </svg>
+  </div>
+
+  <!-- ══ TICKET CTA ══ -->
+  <section id="ticket">
+    <div class="ticket-bg-burst"></div>
+    <!-- star burst decorations (pure CSS) -->
+    <svg class="starburst" viewBox="0 0 100 100">
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="rgba(255,255,255,0.8)" />
+    </svg>
+    <svg class="starburst-l" viewBox="0 0 100 100">
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="rgba(255,255,255,0.8)" />
+    </svg>
+    <div style="position:relative;z-index:1;">
+      <div class="ticket-eyebrow">[ — JANGAN SAMPAI KETINGGALAN — ]</div>
+      <h2 class="ticket-title">GET THE<br>TICKET NOW</h2>
+      <p class="ticket-copy">Rockin' Surabaya bukan sekadar konser — ini adalah pernyataan. Ribuan kepalan tangan, satu
+        panggung, dan musik yang akan mengguncang tulang. Tiket terbatas. Jangan biarkan malam terbaik tahun ini berlalu
+        tanpa kamu.</p>
+      <a href="#" class="btn-ticket">BELI TIKET SEKARANG</a>
+      <div class="ticket-sub">Tiket tersedia di <strong>YesPlis</strong> · yesplis.com</div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-main">
+      <div>
+        <div class="footer-logo-text">ROCKIN'<br>SURABAYA</div>
+        <div class="nav-logo-badge" style="display:inline-block;margin-top:8px;">2026</div>
+        <div class="footer-tagline" style="margin-top:12px;">SUPERMUSIC × SUPERLIVE</div>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#lineup">LINE UP</a></li>
+        <li><a href="#savedate">OVERVIEW</a></li>
+        <li><a href="#rundown">RUNDOWN</a></li>
+        <li><a href="#ticket">TIKET</a></li>
+      </ul>
+      <div class="footer-socials">
+        <a href="#" class="social-icon" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a href="#" class="social-icon" title="TikTok">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+          </svg>
+        </a>
+        <a href="#" class="social-icon" title="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
+          </svg>
+        </a>
+        <a href="#" class="social-icon" title="Spotify">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="footer-copy">© 2026 Supermusic × Superlive · www.superlive.id · All Rights Reserved</div>
+      <div class="footer-copy" styl e="color:#3a3a3a;">Made with ✦ in Surabaya</div>
+    </div>
+  </footer>
+
+  <!-- ══ VINYL DISC ══ -->
+  <!-- AUDIO -->
+  <audio id="vinyl-audio" src="assets/Biarkan Berlari.mp3" loop></audio>
+
+  <!-- ══ VINYL DISC ══ -->
+  <button id="vinyl-btn" onclick="toggleVinyl()" title="Play Soundtrack">
+    <div class="vinyl-disc" id="vinylDisc">
+      <div class="vinyl-label">
+        <div class="vinyl-label-text">RS<br>2026</div>
+      </div>
+    </div>
+    <div class="vinyl-tooltip">▶ Play Soundtrack</div>
+  </button>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
