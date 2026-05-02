@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rockin' Surabaya 2026 — Supermusic Presents</title>
+  <title>Rockin' Surabaya 2026 — Supermusic x Husni Mubarok Presents</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,10 +17,9 @@
     <a href="#" class="nav-logo">
       <div class="nav-logo-img">
         <img src="assets/img/logo.png" alt="">
-        <!-- <div class="nav-logo-text">ROCKIN' SURABAYA</div>
-        <div class="nav-logo-badge">2026</div> -->
       </div>
     </a>
+
     <ul class="nav-links">
       <li><a href="#lineup">Line Up</a></li>
       <li><a href="#savedate">Overview</a></li>
@@ -27,20 +27,23 @@
       <li><a href="#ticket">Tiket</a></li>
       <li><a href="#ticket" class="nav-cta">RSVP SEKARANG</a></li>
     </ul>
-    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
-      <span></span><span></span><span></span>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
   </nav>
 
-  <!-- mobile nav -->
+  <!-- MOBILE NAV -->
   <div class="mobile-nav" id="mobileNav">
-    <button class="close-btn" onclick="toggleMobileNav()">✕</button>
-    <a href="#lineup" onclick="toggleMobileNav()">LINE UP</a>
-    <a href="#savedate" onclick="toggleMobileNav()">OVERVIEW</a>
-    <a href="#rundown" onclick="toggleMobileNav()">RUNDOWN</a>
-    <a href="#ticket" onclick="toggleMobileNav()">TIKET</a>
-    <a href="#ticket" class="nav-cta" style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;"
-      onclick="toggleMobileNav()">RSVP SEKARANG</a>
+    <button class="close-btn" id="closeNav">✕</button>
+
+    <a href="#lineup">LINE UP</a>
+    <a href="#savedate">OVERVIEW</a>
+    <a href="#rundown">RUNDOWN</a>
+    <a href="#ticket">TIKET</a>
+    <a href="#ticket" class="nav-cta mobile-cta">RSVP SEKARANG</a>
   </div>
 
   <!-- ══ HERO ══ -->
@@ -49,15 +52,14 @@
     <!-- <div class="hero-splatter"></div> -->
     <div class="hero-scan"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow fade-up delay-1">[ SUPERMUSIC PRESENTS ]</div>
+      <div class="hero-eyebrow fade-up delay-1">SUPERMUSIC X HUSNI MUBAROK PRESENTS</div>
       <h1 class="hero-headline fade-up delay-2">
-        <span class="line-left">ROCKIN</span>
+        <span class="">ROCKIN</span>
         <span class="line-center">SURABAYA</span>
-        <span class="line-right">IS CALLING.</span>
+        <span class="">IS CALLING.</span>
       </h1>
-      <p class="hero-sub fade-up delay-3">Satu malam. Satu panggung. Ribuan kepalan tangan di udara.</p>
-      <p class="hero-support fade-up delay-4">Rockin Surabaya bukan cuma konser, ini medan tempur buat lo yang masih
-        punya nyali. Luapkan energimu dan jadilah saksi sejarah saat raksasa rock mengambil alih kota!</p>
+      <p class="hero-sub fade-up delay-3">Lanjutkan Dentuman, Besarkan Gelombang!</p>
+      <p class="hero-support fade-up delay-4">Ini bukan cuma konser. Ini adalah kelanjutan cerita—tentang komunitas, tentang musik yang menyatukan generasi, dan tentang Surabaya yang tetap jadi rumah bagi suara-suara lantang dari panggung.</p>
       <div class="cta-row fade-up delay-5">
         <a href="#ticket" class="btn-primary">JOIN THE PIT</a>
         <a href="#savedate" class="btn-outline">DETAIL ACARA</a>
@@ -245,7 +247,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">11:00</span>
             <span class="acc-name">OPEN GATE</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -265,7 +267,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">12:25</span>
             <span class="acc-name">DPMB X SM</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -295,7 +297,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">12:25</span>
             <span class="acc-name">LUKANEGARA</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -324,7 +326,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">13:25</span>
             <span class="acc-name">MIRACLE OF DESTRUCTION</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -353,7 +355,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">13:55</span>
             <span class="acc-name">STEREOWALL</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -382,7 +384,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">14:55</span>
             <span class="acc-name">The Cloves and The Tobacco</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -411,7 +413,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">15:25</span>
             <span class="acc-name">MCPR</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -438,7 +440,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">16:05</span>
             <span class="acc-name">THE JEBLOGS</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -465,7 +467,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">17:05</span>
             <span class="acc-name">SUPERIOTS</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -494,7 +496,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">17:32</span>
             <span class="acc-name">BREAK</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -516,7 +518,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">17:55</span>
             <span class="acc-name">TEENAGE DEATH STAR</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -545,7 +547,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">18:55</span>
             <span class="acc-name">MORFEM</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -574,7 +576,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">19:35</span>
             <span class="acc-name">ROMI & THE JAHAT'S</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -601,7 +603,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">20:15</span>
             <span class="acc-name">SUPERMAN IS DEAd</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -630,7 +632,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">21:10</span>
             <span class="acc-name">KELOMPOK PENERBANG ROKET</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -659,7 +661,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">21:50</span>
             <span class="acc-name">BURGERKILL</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -686,7 +688,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">22:30</span>
             <span class="acc-name">Rebellion Rose</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -713,7 +715,7 @@
           <button class="accordion-trigger" onclick="toggleAccordion(this)">
             <span class="acc-time">23:10</span>
             <span class="acc-name">510 FT. PHOPIRA</span>
-            <span class="acc-arrow">↓</span>
+            <span class="acc-arrow"><i class="ri-arrow-right-down-long-line"></i></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -765,7 +767,7 @@
       <p class="ticket-copy">Rockin' Surabaya bukan sekadar konser — ini adalah pernyataan. Ribuan kepalan tangan, satu
         panggung, dan musik yang akan mengguncang tulang. Tiket terbatas. Jangan biarkan malam terbaik tahun ini berlalu
         tanpa kamu.</p>
-      <a href="#" class="btn-ticket">BELI TIKET SEKARANG</a>
+      <a href="https://www.yesplis.com/event/rockin-surabaya-2025" target="_blank" class="btn-ticket">BELI TIKET SEKARANG</a>
       <div class="ticket-sub">Tiket tersedia di <strong>YesPlis</strong> · yesplis.com</div>
     </div>
   </section>
@@ -774,9 +776,8 @@
   <footer>
     <div class="footer-main">
       <div>
-        <div class="footer-logo-text">ROCKIN'<br>SURABAYA</div>
-        <div class="nav-logo-badge" style="display:inline-block;margin-top:8px;">2026</div>
-        <div class="footer-tagline" style="margin-top:12px;">SUPERMUSIC × SUPERLIVE</div>
+        <img src="assets/img/logo.png" alt="">
+        <div class="footer-tagline" style="margin-top:12px;">SUPERMUSIC × HUSNI MUBAROK</div>
       </div>
       <ul class="footer-nav">
         <li><a href="#lineup">LINE UP</a></li>
@@ -803,17 +804,11 @@
               d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
           </svg>
         </a>
-        <a href="#" class="social-icon" title="Spotify">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
-          </svg>
-        </a>
       </div>
     </div>
     <div class="footer-bar">
-      <div class="footer-copy">© 2026 Supermusic × Superlive · www.superlive.id · All Rights Reserved</div>
-      <div class="footer-copy" styl e="color:#3a3a3a;">Made with ✦ in Surabaya</div>
+      <div class="footer-copy" style="color:#ffffff; font-size: 14px;">Made with 🤘 <a href="https://fehusni.framer.website/" target="_blank" style="color:#ffffff; text-decoration: none; ">Husni Mubarok</a></div>
+      <div class="footer-copy">© 2026 Supermusic × Husni Mubarok · All Rights Reserved</div>
     </div>
   </footer>
 
