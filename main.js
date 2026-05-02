@@ -45,7 +45,7 @@ function toggleAccordion(btn) {
 
 /* ── Countdown ── */
 function updateCountdown() {
-  const target = new Date('2026-12-06T19:00:00+07:00').getTime();
+  const target = new Date('2026-12-12T19:00:00+07:00').getTime();
   const now = Date.now();
   const diff = target - now;
 
