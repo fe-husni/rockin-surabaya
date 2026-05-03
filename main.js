@@ -25,6 +25,7 @@ window.addEventListener('scroll', () => {
     .classList.toggle('scrolled', window.scrollY > 40);
 });
 
+
 /* ── Accordion ── */
 function toggleAccordion(btn) {
   const item = btn.closest('.accordion-item');
@@ -143,3 +144,17 @@ document.addEventListener('click', function firstClickHandler(e) {
     document.removeEventListener('click', firstClickHandler);
   }
 });
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2000,
+  delay: 300,
+})
+
+sr.reveal('.hero-eyebrow, .hero-headline, #vinyl-btn, .section-eyebrow, .date-display, .venue-row, .lineup-header, .rundown-header')
+sr.reveal('.hero-sub, .hero-support, .cta-row, .countdown', {origin: 'bottom'})
+sr.reveal('.footer-main, .footer-bar', {delay: 900, origin: 'bottom'})
+sr.reveal('.lineup-card, .accordion-item, .ticket-top', {origin: 'left'}, {delay: 700})
+sr.reveal('.ticket-bottom', {origin: 'right'}, {delay: 700})
